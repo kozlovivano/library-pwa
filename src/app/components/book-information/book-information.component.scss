@@ -1,0 +1,26 @@
+.header{
+    min-height: 40px;
+    padding-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.body{
+    min-height: 80%;
+    p{
+        font-size: 14px;
+    }
+    .content{
+        position: absolute;
+        display: block;
+        top: 150px;
+        left: 60px;
+    }
+    mat-form-field{
+        font-size: 14px;
+    }
+    .action{
+        button{
+            border-radius: none !important;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="header bgray cdark">
+    <div class="container mt10 cdark">
+        <span>{{ count }} collections</span>
+    </div>
+</div>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="body blightgray">
+    <div class="cdark">
+        <button mat-button class="all-books vm tl" (click)="onAllBooks()">
+            <mat-icon aria-label="Collection item">collections</mat-icon>
+            <span class="ml20">All books</span>
+            <span class="books">{{ books }}</span>
+            <mat-icon aria-label="Collection item" class="goto">keyboard_arrow_right</mat-icon>
+        </button>
+        <mat-divider></mat-divider>
+    </div>
+
+    <div class="cdark" *ngFor="let collection of collections | search: {name: global.searchString, reference: global.searchString}; let i=index;">
+        <button mat-button class="collection vm tl" (click)="onCollectionDetail(collection)" >
+            <mat-icon class="modify" aria-label="Collection item" (click)="onModify(collection); $event.stopPropagation();">create</mat-icon>
+            <span class="ml20">{{ collection.name }}</span>
+            <span class="category">{{ collection.reference }}</span>
+            <span class="books">{{ collection.books }}</span>
+            <mat-icon aria-label="Collection item" class="goto">keyboard_arrow_right</mat-icon>
+        </button>
+        <mat-divider></mat-divider>
+    </div>
+</div>
+<button mat-fab class="bgreen add-collection" (click)="onAdd()">
+    <mat-icon>add</mat-icon>
+</button>
+<app-footer></app-footer>

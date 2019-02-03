@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="header bgray cdark">
+    <div class="container cdark tc">
+        <button mat-icon-button class="pull-left" (click)="onBack()"><mat-icon aria-label="Go back">arrow_back_ios</mat-icon></button>
+        <button mat-icon-button class="pull-right" (click)="onSave()"><mat-icon aria-label="Save">save</mat-icon></button>
+    </div>
+</div>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="body blightgray">
+    <div class="container pt20">
+        <form (ngSubmit)="onSubmit()">
+            <div class="row">
+                <mat-form-field class="col-10">
+                    <input matInput placeholder="Title" [formControl]="title" required>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Author" [formControl]="author">
+                </mat-form-field>
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Editor" [formControl]="editor">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Cover url" [formControl]="cover">
+                </mat-form-field>
+                <mat-form-field class="col-5">
+                    <textarea matInput placeholder="Description" [formControl]="description"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Category" [formControl]="category">
+                </mat-form-field>
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Reference" [formControl]="reference">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-4">
+                    <input matInput placeholder="Publisher" [formControl]="publisher">
+                </mat-form-field>
+                <mat-form-field class="col-6">
+                    <input matInput placeholder="Publication date" [formControl]="publication_date">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Pages" [formControl]="pages">
+                </mat-form-field>
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Volumn" [formControl]="volumn">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="ISBN" [formControl]="isbn" required>
+                </mat-form-field>
+                <mat-form-field class="col-5">
+                    <input matInput placeholder="Note" [formControl]="note">
+                </mat-form-field>
+            </div>
+            <div class="tc row action">
+                <button mat-button class="mb20 bgreen cwhite mr20">Validate</button>
+                <button mat-button class="mb20 bgreen cwhite ml20" (click)="onScan($event)">Validate & scan new</button>
+            </div>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

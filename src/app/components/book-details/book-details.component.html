@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="header bgray cdark">
+    <div class="container cdark tc">
+        <button mat-icon-button class="pull-left" (click)="onBack()"><mat-icon aria-label="Go back">arrow_back_ios</mat-icon></button>
+        <button mat-icon-button><mat-icon aria-label="Edit" (click)="onEdit()">edit</mat-icon></button>
+        <button mat-icon-button class="pull-right"><mat-icon aria-label="Delete" (click)="onDelete()">delete_outline</mat-icon></button>
+    </div>
+</div>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="body blightgray">
+    <div class="container">
+        <div class="cover col-5 pt20 mt20">
+            <img src="{{ cover }}" alt="Book cover" width="150" height="180">
+        </div>
+        <div class="content col-5 cdark">
+            <p>Title: {{ title }}</p>
+            <p>Author: {{ author }}</p>
+            <p>Date: {{ publication_date }}</p>
+            <p>Publisher: {{ publisher }}</p>
+            <p>Category: {{ category }}</p>
+            <p>Collection: {{ collection_name }}</p>
+        </div>
+        <div class="detail cdark mt20">
+            <p>Description: {{ description }}</p>
+            <p>Pages: {{ pages }}</p>
+            <p>ISBN: {{ isbn }}</p>
+            <p>Note: {{ note }}</p>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

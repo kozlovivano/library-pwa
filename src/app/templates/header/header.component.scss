@@ -1,0 +1,13 @@
+mat-toolbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 0 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+.searchInput{
+    position: absolute;
+    width: 25% !important;
+    left: 56%;
+    font-size: 18px;
+    top: -5px;
+}

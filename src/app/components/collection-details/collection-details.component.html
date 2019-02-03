@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="header bgray cdark">
+    <div class="container tc cdark">
+        <button mat-icon-button class="pull-left" (click)="onBack()">
+            <mat-icon aria-label="Go back">arrow_back_ios</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="sort" class="ml10 sort">Sort by {{ sort_by }}</button>
+        <mat-menu #sort="matMenu">
+            <button mat-menu-item (click)="onSort('title')">Title</button>
+            <button mat-menu-item (click)="onSort('author')">Author</button>
+            <button mat-menu-item (click)="onSort('editor')">Editor</button>
+            <button mat-menu-item (click)="onSort('publisher')">Publisher</button>
+            <button mat-menu-item (click)="onSort('publication_date')">Publication date</button>
+            <button mat-menu-item (click)="onSort('reference')">Reference</button>
+        </mat-menu>
+        <button mat-icon-button class="pull-right" (click)="onExport()">
+            <mat-icon aria-label="Go back">call_made</mat-icon>
+        </button>
+    </div>
+</div>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="body blightgray" @appear>
+    <div class="cdark collection-summary container">
+        <span class="collection-name" *ngIf="!collectionName">Collection name</span>
+        <span class="collection-name">{{ collectionName }}</span>
+        <span class="collection-books pull-right">{{ count }} book(s) </span>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="cdark" *ngFor="let book of books | search: {title: global.searchString, author: global.searchString, reference: global.searchString}; let i=index;">
+        <button mat-button class="book vm tl" (click)="onBookDetail(book)">
+            <div class="col-5">
+                <p class="title cgreen">{{ book.title }}</p>
+                <p class="author">{{ book.author }}</p>
+            </div>
+            <div class="col-3 tr">
+                <p class="page">{{ book.pages }} pages</p>
+                <p class="year">{{ book.publication_date }}</p>
+                <p class="reference">{{ book.reference }}</p>
+            </div>
+            <div class="col-2 tc cover">
+                <img src="{{ book.cover }}" alt="Book cover" width="60" height="70" class="ml10 mt10">
+            </div>
+        </button>
+        <mat-divider></mat-divider>
+    </div>
+</div>
+<button mat-fab class="bgreen add-book" [matMenuTriggerFor]="menu">
+    <mat-icon>add</mat-icon>
+</button>
+<mat-menu #menu="matMenu" class="bwhite cdark">
+    <button mat-menu-item (click)="onCapture()">
+        <mat-icon>dialpad</mat-icon>
+        <span>Capture</span>
+    </button>
+    <button mat-menu-item (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+        <span>Search</span>
+    </button>
+    <button mat-menu-item (click)="onManual()">
+        <mat-icon>edit</mat-icon>
+        <span>Manual</span>
+    </button>
+</mat-menu>

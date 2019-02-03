@@ -1,0 +1,41 @@
+.header{
+    min-height: 40px;
+    padding-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    span{
+        line-height: 40px;
+    }
+    .sort{
+        margin-top: 2px;
+    }
+}
+.body{
+    min-height: 80%;
+    p{
+        margin: 0;
+        padding: 0;
+        line-height: 20px;
+    }
+    .book{
+        position: relative;
+        min-height: 100px;
+        width: 100%;
+        padding: 10px 15px;
+        .title{
+            font-size: 20px;
+            line-height: 30px;
+            max-width: 200px;
+            overflow: hidden;
+        }
+        .cover{
+            height: 80px;
+        }
+    }
+}
+.add-book{
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    z-index: 2;
+}

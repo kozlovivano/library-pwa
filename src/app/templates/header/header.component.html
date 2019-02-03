@@ -1,0 +1,29 @@
+<mat-toolbar class="bgreen cwhite">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="onHome()">
+            <mat-icon>home</mat-icon>
+        </button>
+        <span class="ml5">{{ subtitle }}</span>
+        <span class="spacer"></span>
+
+        <mat-form-field class="searchInput" *ngIf="searchEnabled">
+            <input matInput type="text" [(ngModel)]="searchString" (keyup)="onSearchStringUpdate()">
+        </mat-form-field>
+        
+        <button mat-icon-button *ngIf="!searchEnabled">
+            <mat-icon (click)="onSearch(true)">search</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="searchEnabled">
+            <mat-icon (click)="onSearch(false)">clear</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="bwhite">
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>input</mat-icon>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

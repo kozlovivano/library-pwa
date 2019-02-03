@@ -1,0 +1,20 @@
+<app-auth-header></app-auth-header>
+
+<div class="login bgray">
+    <form class="pt20" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="cdark">
+            <mat-label>E-mail</mat-label>
+            <input matInput [formControl]="email" required>
+            <mat-icon matPrefix class="mr15">mail_outline</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="cdark mb10">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [formControl]="password" required>
+            <mat-icon matPrefix class="mr15">vpn_key</mat-icon>
+        </mat-form-field>
+        <button mat-flat-button class="bgreen cwhite">Login</button>
+    </form>
+    <button mat-flat-button (click)="onRegister()" class="bgreen cwhite">Create a new account</button>
+    <button mat-button (click)="onForgetPassword()" class="mt20 cdark">Forgot Password?</button>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+</div>

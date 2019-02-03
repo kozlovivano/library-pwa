@@ -1,0 +1,351 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.pull-right{
+    position: absolute !important;
+    right: 0;
+}
+.pull-left{
+    position: absolute !important;
+    left: 0;
+}
+
+.row{
+    width: 100% !important;
+}
+
+.col-1{
+    width: 10% !important;
+    display: inline-block;
+}
+.col-2{
+    width: 20% !important;
+    display: inline-block;
+}
+.col-3{
+    width: 30% !important;
+    display: inline-block;
+}
+.col-4{
+    width: 40% !important;
+    display: inline-block;
+}
+.col-5{
+    width: 50% !important;
+    display: inline-block;
+}
+.col-6{
+    width: 60% !important;
+    display: inline-block;
+}
+.col-7{
+    width: 70% !important;
+    display: inline-block;
+}
+.col-8{
+    width: 80% !important;
+    display: inline-block;
+}
+.col-9{
+    width: 90% !important;
+    display: inline-block;
+}
+.col-10{
+    width: 100% !important;
+    display: inline-block;
+}
+.tc{
+    text-align: center !important;
+}
+.tl{
+    text-align: left !important;
+}
+.tr{
+    text-align: right !important;
+}
+.vm{
+    vertical-align: middle !important;
+}
+.vt{
+    vertical-align: top !important;
+}
+.vb{
+    vertical-align: bottom !important;
+}
+// The main theme colors. b for bg color and c for font color
+
+.bgreen {
+  background-color: #1ABC9C !important;
+}
+
+.bdark {
+  background-color: #404041 !important;
+}
+
+.bgray {
+  background-color: #E0E0E0 !important;
+}
+
+.blightgray {
+  background-color: #f9f9f9 !important;
+}
+
+.bwhite {
+  background-color: #FFFFFF !important;
+}
+
+.cgreen {
+  color: #1ABC9C !important;
+}
+
+.cdark {
+  color: #404041 !important;
+}
+
+.cgray {
+  color: #E0E0E0 !important;
+}
+
+.clightgray {
+  color: #f9f9f9 !important;
+}
+
+.cwhite {
+  color: #CBFFFF !important;
+}
+//
+// The most-used margins and paddings
+.mg0 {
+  margin: 0 !important;
+}
+
+.mg5 {
+  margin: 5px !important;
+}
+
+.mg10 {
+  margin: 10px !important;
+}
+
+.mg15 {
+  margin: 15px !important;
+}
+
+.mg20 {
+  margin: 20px !important;
+}
+
+.ml0 {
+  margin-left: 0 !important;
+}
+
+.ml5 {
+  margin-left: 5px !important;
+}
+
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.ml15 {
+  margin-left: 15px !important;
+}
+
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mt5 {
+  margin-top: 5px !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+
+.mt15 {
+  margin-top: 15px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mr0 {
+  margin-right: 0 !important;
+}
+
+.mr5 {
+  margin-right: 5px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.mr20 {
+  margin-right: 20px !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.pd0 {
+  padding: 0 !important;
+}
+
+.pd5 {
+  padding: 5px !important;
+}
+
+.pd10 {
+  padding: 10px !important;
+}
+
+.pd15 {
+  padding: 15px !important;
+}
+
+.pd20 {
+  padding: 20px !important;
+}
+
+.pl0 {
+  padding-left: 0 !important;
+}
+
+.pl5 {
+  padding-left: 5px !important;
+}
+
+.pl10 {
+  padding-left: 10px !important;
+}
+
+.pl15 {
+  padding-left: 15px !important;
+}
+
+.pl20 {
+  padding-left: 20px !important;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pt5 {
+  padding-top: 5px !important;
+}
+
+.pt10 {
+  padding-top: 10px !important;
+}
+
+.pt15 {
+  padding-top: 15px !important;
+}
+
+.pt20 {
+  padding-top: 20px !important;
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
+.pr5 {
+  padding-right: 5px !important;
+}
+
+.pr10 {
+  padding-right: 10px !important;
+}
+
+.pr15 {
+  padding-right: 15px !important;
+}
+
+.pr20 {
+  padding-right: 20px !important;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
+.pb5 {
+  padding-bottom: 5px !important;
+}
+
+.pb10 {
+  padding-bottom: 10px !important;
+}
+
+.pb15 {
+  padding-bottom: 15px !important;
+}
+
+.pb20 {
+  padding-bottom: 20px !important;
+}
+//
+// Other templating
+button:focus {
+  outline: none !important;
+  border-radius: none !important;
+}
+
+mat-spinner{
+  position: absolute !important;
+  top: 40%;
+  left: 37%;
+  width: 80%;
+  z-index: 10;
+}
+
+canvas{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}

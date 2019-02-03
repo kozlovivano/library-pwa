@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<div class="container">
+  <div id="preview">
+  </div>
+  <button mat-fab class="camera-control bgreen" *ngIf="!isScan" (click)="startScan()">
+    <mat-icon>camera_enhance</mat-icon>
+  </button>
+  <button mat-fab class="camera-control bgreen" *ngIf="isScan" (click)="stopScan()">
+    <mat-icon>clear</mat-icon>
+  </button>
+  <div class="isbn">
+    <p class="cgreen" *ngIf="isDetected">Detected ISBN: {{ isbn }}</p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="header bgray cdark">
+    <div class="container cdark">
+        <button mat-icon-button class="pull-left" (click)="onBack()"><mat-icon aria-label="Go back">arrow_back_ios</mat-icon></button>
+        <button mat-icon-button class="pull-right" (click)="onDiscard()"><mat-icon aria-label="Delete">clear</mat-icon></button>
+    </div>
+</div>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="body">
+    <div class="container pt20">
+        <form (ngSubmit)="onSubmit()">
+            <div class="row">
+                <mat-form-field class="col-10">
+                    <input matInput placeholder="Name" [formControl]="name" required>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col-10">
+                    <input matInput placeholder="Collection reference" [formControl]="reference" required>
+                </mat-form-field>
+            </div>
+            <div class="row tc">
+                <button mat-button class="mt20 col-4 bgreen cwhite mr20">OK</button>
+                <button mat-button class="mt20 col-4 bgreen cwhite mr20" (click)="onCancel($event)">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

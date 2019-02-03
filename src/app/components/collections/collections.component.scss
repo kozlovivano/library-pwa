@@ -1,0 +1,51 @@
+.header{
+    min-height: 40px;
+    padding-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.body{
+    min-height: 80%;
+    .collection{
+        position: relative;
+        min-height: 60px;
+        width: 100%;
+        padding: 10px 15px;
+        .modify{
+            z-index: 2;
+        }
+        .category{
+            position: absolute;
+            right: 100px;
+        }
+        .books{
+            position: absolute;
+            right: 40px;
+        }
+        .goto{
+            position: absolute;
+            right: 15px;
+            top: 17px;
+        }
+    }
+    .all-books{
+        position: relative;
+        min-height: 40px;
+        width: 100%;
+        padding: 5px 15px;
+        .books{
+            position: absolute;
+            right: 40px;
+        }
+        .goto{
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+    }
+}
+.add-collection{
+    position: fixed;
+    top: 80%;
+    right: 5%;
+}
